@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cardapio</title>
+    
+
+    <style>
+        /*a formatacão de todas as caixas estão dentro do WRAPPER*/
+
+
+        /*CAIXA PRINCIPAL QUE RECEBERÁ AS CAIXAS (BOX)*/
+        .wrapper {
+            /*centralizar*/
+            margin: auto;
+            /*para transformar em blocos*/
+            display: flex;
+            /*direção das caixas temos tambem em coluna*/
+            flex-direction: row;
+            /*quando utilizamos blocos eles ficam um do lado do outro mesmo que tenha tamanho total da tela, então para resolver isso utilizamos o flex-wrap:-wrap;*/
+            flex-wrap: wrap;
+            /*alinhamento os blocos na horizontal dentro do principal*/
+            justify-content: center;
+            /*alinhando os blocos na vertical*/
+            align-items: center;
+            width: 90%; /*largura do principal*/
+            height: auto;
+            background-color: rgb(255, 255, 255);
+            padding:0px /*espaço entre as caixas e o principal*/
+
+        }
+
+        /* juntos*/ 
+        .logoa {
+            background-color: rgb(0, 0, 0);
+            color: #000000;
+            width: 10%;
+            height: 80px;
+            margin: 0px; /*margem ao redor das caixas para ficarem distantes*/
+            border-radius: 0px; /*bordas arredondadas*/
+        }
+
+        /*TAMANHO DA IMAGEM DO LOGO*/
+        .TAMANHOLG{
+            width: 100%;
+            height: 100%;
+        }
+
+        .boxmenua {
+            background-color: rgb(0, 0, 0);
+            width: 90%;
+            height: 80px;
+            margin: 0px; /*margem ao redor das caixas para ficarem distantes*/
+            border-radius: 0px; /*bordas arredondadas*/
+            nav{
+    /* para não ficar colado na margem */
+    padding-right: 2%;
+	width: 98%;
+	height: 50px;
+	 background-color: rgb(0, 0, 0);
+}
+
+nav ul{
+    /* retirei o traço abaixo do link */
+	list-style: none;
+	margin: 0;
+	padding: 0;
+    /* meus botões na direita "float" */
+	float: right;
+}
+
+/* ordem de aparição dos botoes */
+nav ul li{
+	float: left;
+}
+
+nav ul li a{
+	color: #f5f5f5;
+	text-decoration: none; /*none desativa o css */
+	padding: 15px; /*espaçamento texto do link e bordas*/
+	display: block; /*transformar em blocos*/
+    border: #000000;
+}
+
+nav ul li a:hover{ /*evento mouse quando passa o mouse sobre o botao*/
+	background-color: #f1cc12;
+	transition: all .5s; /*efeito de transição*/
+    border-radius: 10px;/*arredondar bordas*/
+}
+        }
+        /* juntos*/   
+
+    .paginaprincipal 
+    {
+        background-color: rgb(255, 255, 255);
+            width: 20%;
+            height: auto;
+            margin: 10px; /*margem ao redor das caixas para ficarem distantes*/
+            border-radius: 10px; /*bordas arredondadas*/
+            border-style: groove;
+            border-width: 3px;
+            border-color: #000000;           
+            text-align: center;
+            color: #000000;            
+            float: left;
+
+
+    }
+        
+
+          .infoprincipal {
+            background-color: rgb(213, 183, 183);
+            width: 50%;
+            height: 100px;
+            margin: 0px; /*margem ao redor das caixas para ficarem distantes*/
+            border-radius: 0px; /*bordas arredondadas*/
+            text-align: center;
+            color: #fffdfd;
+        }    
+
+        .dados {
+            background-color: rgb(0, 0, 0);
+            width: 50%;
+            height: auto;
+            margin: 0px; /*margem ao redor das caixas para ficarem distantes*/
+            border-radius: 0px; /*bordas arredondadas*/
+            text-align: center;
+            color: #fffdfd;
+
+        }
+
+        
+        
+        .info1{
+            width: 10%;
+            height:auto;
+            margin-left: 80px;
+            margin-right: 15px;
+
+        }
+        .info2 {
+             width: 10%;
+            height: auto;
+            margin-left: 80px;
+            margin-right: 15px;
+
+        }
+        .info3{
+             width: 10%;
+            height:auto;
+            margin-left: 80px;
+            margin-right: 15px;
+
+        }
+        .info4{
+             width: 10%;
+            height:auto;
+            margin-left: 80px;
+            margin-right: 15px;
+
+        }
+
+        .dadosp {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+            
+
+        }
+
+        .dadosr {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+
+
+        }
+
+    
+
+        .boxredea {
+            background-color: rgb(0, 0, 0);
+            width: 50%;
+            height:368px;
+            margin: 0px; /*margem ao redor das caixas para ficarem distantes*/
+            border-radius: 0px; /*bordas arredondadas*/                        
+        }   
+
+        .redeimagem{
+            width: 100%;
+            height: auto;
+           
+
+        }
+        
+       
+        .boxrodapea {
+            background-color: rgb(128, 124, 124);
+            width: 100%;
+            height: auto;
+            margin: 0px; /*margem ao redor das caixas para ficarem distantes*/
+            border-radius: 0px; /*bordas arredondadas*/
+            clear: both; 
+            text-align: center;
+            color: #000000;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+
+        .zoom {
+            transition: 0.3s;            
+        }
+
+        .zoom:hover{
+            transform: scale(1.2);
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div 
+         class="logoa">
+         <img src="imagem/logo atual 3.jpg" class="TAMANHOLG" alt="">
+
+        </div>
+
+            <div 
+             class="boxmenua">
+              <nav>
+                <ul>
+                 <li> <a href=""> IMPERIAL </a> </li>
+                 <li> <a href=""> CARDÁPIO </a> </li>
+                 <li> <a href=""> CONTATO </a> </li>
+                </ul>
+
+             
+              </nav>
+            </div>
+
+            <div class="paginaprincipal zoom">
+                <img src="imagem cardapio/bolinho de chuva.jpg" class="infoprincipal" alt="">
+                <h3>Bolinho de Chuva</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi sapiente repellat nobis officia, iusto quisquam. Atque nulla ipsa voluptatum, voluptatibus, quidem facilis natus eligendi aliquam accusamus laborum, quam animi commodi.</p>
+                
+            </div>
+
+            <div class="paginaprincipal zoom">
+                <img src="imagem cardapio/bolo chocolate.jpg" class="infoprincipal" alt="">
+                <h3>Bolo de chocolate</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi sapiente repellat nobis officia, iusto quisquam. Atque nulla ipsa voluptatum, voluptatibus, quidem facilis natus eligendi aliquam accusamus laborum, quam animi commodi.</p>
+                
+            </div>
+
+            <div class="paginaprincipal zoom">
+                <img src="imagem cardapio/coxinha.jpg" class="infoprincipal" alt="">
+                <h3>Coxinha</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi sapiente repellat nobis officia, iusto quisquam. Atque nulla ipsa voluptatum, voluptatibus, quidem facilis natus eligendi aliquam accusamus laborum, quam animi commodi.</p>
+                
+            </div>
+
+            <div class="paginaprincipal zoom">
+                <img src="imagem cardapio/crossaissant.jpg" class="infoprincipal" alt="">
+                <h3>Crossaint</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi sapiente repellat nobis officia, iusto quisquam. Atque nulla ipsa voluptatum, voluptatibus, quidem facilis natus eligendi aliquam accusamus laborum, quam animi commodi.</p>
+                
+            </div>
+
+            <div class="paginaprincipal zoom">
+                <img src="imagem cardapio/gelatina.jpg"  class="infoprincipal" alt="">
+                <h3>Gelatina</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi sapiente repellat nobis officia, iusto quisquam. Atque nulla ipsa voluptatum, voluptatibus, quidem facilis natus eligendi aliquam accusamus laborum, quam animi commodi.</p>
+                
+            </div>
+
+            <div class="paginaprincipal zoom">
+                <img src="imagem cardapio/kibe.jpg" class="infoprincipal" alt="">
+                <h3>Kibe</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi sapiente repellat nobis officia, iusto quisquam. Atque nulla ipsa voluptatum, voluptatibus, quidem facilis natus eligendi aliquam accusamus laborum, quam animi commodi.</p>
+                
+            </div>
+
+            <div class="paginaprincipal zoom">
+                <img src="imagem cardapio/pave de abacaxi.jpg" class="infoprincipal" alt="">
+                <h3>Pave de Abacaxi</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi sapiente repellat nobis officia, iusto quisquam. Atque nulla ipsa voluptatum, voluptatibus, quidem facilis natus eligendi aliquam accusamus laborum, quam animi commodi.</p>
+                
+            </div>
+
+            <div class="paginaprincipal zoom">
+                <img src="imagem cardapio/risole.jpg" class="infoprincipal" alt="">
+                <h3>Risole</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi sapiente repellat nobis officia, iusto quisquam. Atque nulla ipsa voluptatum, voluptatibus, quidem facilis natus eligendi aliquam accusamus laborum, quam animi commodi.</p>
+                
+            </div>
+
+            <div class="paginaprincipal zoom">
+                <img src="imagem cardapio/salada de frutas.jpg" class="infoprincipal" alt="">
+                <h3>Salada de frutas</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi sapiente repellat nobis officia, iusto quisquam. Atque nulla ipsa voluptatum, voluptatibus, quidem facilis natus eligendi aliquam accusamus laborum, quam animi commodi.</p>
+                
+            </div>
+
+            <div class="paginaprincipal zoom">
+                <img src="imagem cardapio/sucos.jpg" class="infoprincipal" alt="">
+                <h3>Sucos</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi sapiente repellat nobis officia, iusto quisquam. Atque nulla ipsa voluptatum, voluptatibus, quidem facilis natus eligendi aliquam accusamus laborum, quam animi commodi.</p>
+                
+            </div>
+
+            <div class="paginaprincipal zoom">
+                <img src="imagem cardapio/torta de limão.jpg" class="infoprincipal" alt="">
+                <h3>Torta de Limão</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi sapiente repellat nobis officia, iusto quisquam. Atque nulla ipsa voluptatum, voluptatibus, quidem facilis natus eligendi aliquam accusamus laborum, quam animi commodi.</p>
+                
+            </div>
+
+            <div class="paginaprincipal zoom">
+                <img src="imagem cardapio/torta de morango.jpg" class="infoprincipal" alt="">
+                <h3>Torta de morango</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi sapiente repellat nobis officia, iusto quisquam. Atque nulla ipsa voluptatum, voluptatibus, quidem facilis natus eligendi aliquam accusamus laborum, quam animi commodi.</p>
+                
+            </div>
+
+
+
+
+
+
+            <div class="dados">
+                <div class="dadosp">
+                 <img src="imagem/img1rodape.jpg" class="info1" alt="">
+                 <p>O IMPERIAL</p>
+
+                 <img src="imagem/img2rodape.png" class="info2" alt="">
+                 <p>CARDAPIO</p>
+              
+                </div>
+
+                <div class="dadosr">
+                   <img src="imagem/img3rodape.png" class="info3" alt="">
+                   <p>ONDE ESTAMOS</p>
+
+                   <img src="imagem/img4rodape.png" class="info4" alt="">
+                   <p>COWORKING</p>
+                </div>
+            </div>
+         
+
+            
+         
+        
+
+        <div 
+         class="boxredea">
+         <img src="imagem/redes_sociais.png" class="redeimagem" alt="">
+
+        </div>
+
+        
+
+        <div 
+         class="boxrodapea">
+         <p> Todos os direitos reservados - 2024 </p>
+
+        </div>
+
+    </div>
+</body>
+</html>

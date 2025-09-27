@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <!-- !--caixaque recebera o formulario -->
+    <div 
+     class="conteudo_formulario"> 
+     
+        
+       <form method="post" id="gcontato" action="guilherme.rodrigues.neg@gmail.com">
+         <!-- metodo post para guardar as informações id (indentificação) para chamar no css e formatar action para qual email irão os dadostemos o method GET para pesquisas. Ele não guarda o conteúdo
+         Get pesquisa (pega os dados para pesquisar)
+         post para enviar dados (dados cadastrais para enviar por email) -->
+       </form>
+
+          <br>
+
+        <fieldset id="usuario"> <!-- conjunto de campos em bloco -->
+
+          <legend>Indentificação do Usuário</legend>
+          <!-- teremos uma legenda acima do bloco para identificá-lo -->
+
+          <label for="cNome"> Nome: </label>
+          <input type="text" name="tNome" id="cNome" size="20" maxlength="20"
+           placeholder="DIgite seu nome aqui" autofocus required/>
+
+           <!-- maxlength= qtde de caracteres que irá aceitar
+           ***size= tamanho da caixa de texto
+           ***placeholder - dica para o usuário de qual será o conteúdo da caixa
+           ***autofocus - cursor ficará dentro da caixa
+           required - e o campo será obrigatório -->
+
+            <p>
+                <label for="cSenha"> Senha:</label>
+                <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" 
+                placeholder="8 dígitos" required />
+            </p>
+            <!-- required - campo obrigatório -->
+
+            <p>
+                <label for="cMail">E-mail:</label>
+                <input type="email" name="tMail" id="cMail" size="30" maxlength="30"
+                placeholder="Ex: exemplo@mail.com" required/>
+            </p>
+
+       
+
+            <fieldset id="sexo">
+               <legend> Sexo:</legend>
+               <!-- type radio para bolinhas de alternativa -->
+               <input type="radio" name="tSexo" id="cMasc"/>
+               <label for="cMasc">Masculino</label>
+               <br/>   <!-- break quebra de linha para ficar embaixo -->
+               <input type="radio" name="tSexo" id="cFem">
+               <label for="cFem">Feminino</label>
+
+            </fieldset>
+
+            <p>
+              Data de Nascimento: <input type="date" name="tNasc" id="cNasc" >
+            </p>
+           <!-- aparecerá o calendário. Se não aárecer é pq o navegador não está atualizado -->
+        </fieldset>
+        <br>
+
+            <fieldset id="endereco">
+
+                <legend>Endereço do Usuário</legend>
+                <p>
+                 <label for="cRua">Logradouro:</label>
+                 <input type="text" name="tRua" id="cRua" size="30" maxlength="50"
+                 placeholder="Rua, Av, Trav,..." required>
+                </p>  
+
+                <p>
+                    <label for="cNum">Número</label>
+                    <input type="number" name="tNum" id="cNum" min="0" max="99999"/>
+                    <!-- type number aparecerá botao de escolha -->
+                </p>
+
+                <p>
+                    <label for="cEst">Estado:</label>
+                    <!-- SELECT criar caixas combinadas - SELECTED (este coloco dentro da tag optino) - deixar 
+                    o São Paulo marcedo -***VAlue o que vc colocar será como o banco de dados receberá. Caso vc
+                    não coloque ele receberá São Paulo mesmo -->
+                    <select name="tEst" id="cEst">
+                        <optgroup label="Região Sudeste">
+                            <option value="SP" selected>São Paulo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="ES">Espirito Santo</option>
+                        </optgroup>
+
+                        <optgroup label="Região Sul">
+                            <option value="PR">Paraná</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                        </optgroup>
+                    </select>
+
+                </p>
+            </fieldset>
+            <br>
+
+            <fieldset id="mensagem">
+                <legend>Mensagem do Usuário</legend>
+                <p>
+                    <label for="cUrg">Grau de Urgência:</label>
+                    Min <input type="range" name="tUrg" id="cUrg" min="0" max="10"> Máx
+                </p>
+
+                <p>
+                    <label for="cMsg">Mensagem:</label> <br>
+                    <textarea 
+                      name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem">
+
+                    </textarea>
+
+
+                </p>
+
+
+            </fieldset>
+
+            <input type="submit" name="Enviar"/>
+            <input type="reset" name="Limpar"/>
+
+
+    </div>
+
+           
+</body>
+</html>

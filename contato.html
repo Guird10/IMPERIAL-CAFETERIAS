@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contato</title>
+
+    <style>
+        /*a formatacão de todas as caixas estão dentro do WRAPPER*/
+
+
+        /*CAIXA PRINCIPAL QUE RECEBERÁ AS CAIXAS (BOX)*/
+        .wrapper {
+            /*centralizar*/
+            margin: auto;
+            /*para transformar em blocos*/
+            display: flex;
+            /*direção das caixas temos tambem em coluna*/
+            flex-direction: row;
+            /*quando utilizamos blocos eles ficam um do lado do outro mesmo que tenha tamanho total da tela, então para resolver isso utilizamos o flex-wrap:-wrap;*/
+            flex-wrap: wrap;
+            /*alinhamento os blocos na horizontal dentro do principal*/
+            justify-content: center;
+            /*alinhando os blocos na vertical*/
+            align-items: center;
+            width: 90%; /*largura do principal*/
+            height: auto;
+            background-color: rgb(255, 255, 255);
+            padding:0px /*espaço entre as caixas e o principal*/
+
+        }
+
+        /* juntos*/ 
+        .logoa {
+            background-color: rgb(0, 0, 0);
+            color: #000000;
+            width: 10%;
+            height: 80px;
+            margin: 0px; /*margem ao redor das caixas para ficarem distantes*/
+            border-radius: 0px; /*bordas arredondadas*/
+        }
+
+        /*TAMANHO DA IMAGEM DO LOGO*/
+        .TAMANHOLG{
+            width: 100%;
+            height: 100%;
+        }
+
+        .boxmenua {
+            background-color: rgb(0, 0, 0);
+            width: 90%;
+            height: 80px;
+            margin: 0px; /*margem ao redor das caixas para ficarem distantes*/
+            border-radius: 0px; /*bordas arredondadas*/
+            nav{
+    /* para não ficar colado na margem */
+    padding-right: 2%;
+	width: 98%;
+	height: 50px;
+	 background-color: rgb(0, 0, 0);
+}
+
+nav ul{
+    /* retirei o traço abaixo do link */
+	list-style: none;
+	margin: 0;
+	padding: 0;
+    /* meus botões na direita "float" */
+	float: right;
+}
+
+/* ordem de aparição dos botoes */
+nav ul li{
+	float: left;
+}
+
+nav ul li a{
+	color: #f5f5f5;
+	text-decoration: none; /*none desativa o css */
+	padding: 15px; /*espaçamento texto do link e bordas*/
+	display: block; /*transformar em blocos*/
+    border: #000000;
+}
+
+nav ul li a:hover{ /*evento mouse quando passa o mouse sobre o botao*/
+	background-color: #f1cc12;
+	transition: all .5s; /*efeito de transição*/
+    border-radius: 10px;/*arredondar bordas*/
+}
+        }
+        /* juntos*/   
+
+        .boxcontato {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 100%;
+            
+       }    
+       
+       .nomep{
+        border-color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        padding: 5px;
+        border-radius: 5px;
+       }
+
+       .emailpe{
+        border-color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        padding: 5px;
+        border-radius: 5px;
+       }
+       
+       
+
+
+
+        .boxinfo {
+            background-color: rgb(0, 0, 0);
+            width: 50%;
+            height: 120%;           
+            border-radius: 0px; /*bordas arredondadas*/
+            text-align: center;
+            color: #fffdfd;
+            float: left;
+        }    
+        
+        .boxinfo1{
+            width: 10%;
+            height:auto;
+            margin-left: 80px;
+            margin-right: 15px;
+
+        }
+        .boxinfo2 {
+             width: 10%;
+            height: auto;
+            margin-left: 80px;
+            margin-right: 15px;
+
+        }
+        .boxinfo3{
+             width: 10%;
+            height:auto;
+            margin-left: 80px;
+            margin-right: 15px;
+
+        }
+        .boxinfo4{
+             width: 10%;
+            height:auto;
+            margin-left: 80px;
+            margin-right: 15px;
+
+        }
+
+        .infop {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+            
+
+        }
+
+        .infob {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+
+
+        }
+
+    
+
+        .boxrede {
+            background-color: rgb(0, 0, 0);
+            width: 50%;
+            height: 365px;;
+            margin: 0px; /*margem ao redor das caixas para ficarem distantes*/
+            border-radius: 0px; /*bordas arredondadas*/   
+            float: right;                     
+        }   
+
+        .boxredeimg{
+            width: 100%;
+            height: auto;
+           
+
+        }
+
+        
+        
+       
+        .boxrodapea {
+            background-color: rgb(128, 124, 124);
+            width: 100%;
+            height: auto;
+            margin: 0px; /*margem ao redor das caixas para ficarem distantes*/
+            border-radius: 0px; /*bordas arredondadas*/
+            clear: both; 
+            text-align: center;
+            color: #000000;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+
+        .zoom {
+            transition: 0.3s;            
+        }
+
+        .zoom:hover{
+            transform: scale(1.2);
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div 
+         class="logoa">
+         <img src="imagem/logo atual 3.jpg" class="TAMANHOLG" alt="">
+
+        </div>
+
+            <div 
+             class="boxmenua">
+              <nav>
+                <ul>
+                 <li> <a href=""> IMPERIAL </a> </li>
+                 <li> <a href=""> CARDÁPIO </a> </li>
+                 <li> <a href=""> CONTATO </a> </li>
+                </ul>
+
+             
+              </nav>
+            </div>
+
+            <div class="boxcontato">
+
+                <fieldset id="usuario"> <!-- conjunto de campos em bloco -->
+
+                  <legend>Indentificação do Usuário</legend>
+                   <!-- teremos uma legenda acima do bloco para identificá-lo -->
+
+                  <label for="cNome" class="nomep"> Nome: </label> <br>
+                  <input type="text" name="tNome" id="cNome" size="20" maxlength="20"
+                  placeholder="DIgite seu nome aqui" autofocus required/>
+
+                    <p class="nomep">
+                        <label for="cTel"> Telefone para contato:</label> <br>
+                        <input type="number" name="tTelefone" id="cTelefone" min="0" max="11" size="20" maxlength="20"
+                        placeholder="11 dígitos" required>
+                    </p>
+
+                    <p class="nomep">
+                     <label for="cMail" class="emailpe">E-mail:</label> <br>
+                     <input type="email" name="tMail" id="cMail" size="30" maxlength="30"
+                     placeholder="Ex: exemplo@mail.com" required/>
+                    </p>
+                 <fieldset>
+
+                     <fieldset id="mensagem">
+                <legend>Mensagem: <input type="date" name="tconsulta" id="cconsulta"></legend>                
+
+                <p class="nomep">
+                    <label for="cMsg"></label> <br>
+                    <textarea 
+                      name="tMsg" id="cMsg" cols="200" rows="10" placeholder="Deixe aqui sua mensagem">
+
+                    </textarea>
+
+
+                </p>
+                <input type="submit" name="Enviar"/>
+
+                
+            </fieldset>
+
+            
+
+
+
+            <div 
+         class="boxinfo">
+
+            <div class="infop">
+              <img src="imagem/img1rodape.jpg" class="boxinfo1" alt="">
+              <p>O IMPERIAL</p>
+
+              <img src="imagem/img2rodape.png" class="boxinfo2" alt="">
+              <p>CARDAPIO</p>
+              
+            </div>
+
+            <div class="infob">
+                <img src="imagem/img3rodape.png" class="boxinfo3" alt="">
+              <p>ONDE ESTAMOS</p>
+
+              <img src="imagem/img4rodape.png" class="boxinfo4" alt="">
+              <p>COWORKING</p>
+
+            </div>
+         
+        </div>
+
+        <div 
+         class="boxrede">
+         <img src="imagem/redes_sociais.png" class="boxredeimg" alt="">
+
+        </div>
+
+                    
+
+        <div 
+         class="boxrodapea">
+         <p> Todos os direitos reservados - 2024 </p>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
